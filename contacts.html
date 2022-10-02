@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style_index.css">
+	<script src="js/script.js"></script>
+	<title>Hepoll</title>
+</head>
+
+<body>
+	<!-- Burger-menu button animation script -->
+	<script>		
+		function myFunction1() {
+			document.getElementById("arrow1").classList.toggle("open");
+			document.getElementById("myDropdown1").classList.toggle("show");		
+		}
+		function myFunction2() {
+			document.getElementById("arrow2").classList.toggle("open");
+			document.getElementById("myDropdown2").classList.toggle("show");		
+		}
+		function myFunction3() {
+			document.getElementById("arrow3").classList.toggle("open");
+			document.getElementById("myDropdown3").classList.toggle("show");		
+		} 
+
+		window.onclick = function(event) {
+		if (!event.target.matches('.dropbtn')) {
+			var dropdowns = document.getElementsByClassName("dropdown-content");
+			var i;
+			for (i = 0; i < dropdowns.length; i++) {
+				var openDropdown = dropdowns[i];
+				if (openDropdown.classList.contains('show')) {
+					openDropdown.classList.remove('show');
+				}
+			}
+
+			var dropdowns = document.getElementsByClassName("arrow-4");
+			var i;
+			for (i = 0; i < dropdowns.length; i++) {
+				var openDropdown = dropdowns[i];
+				if (openDropdown.classList.contains('open')) {
+					openDropdown.classList.remove('open');
+				}
+			}
+		}
+		}
+	</script>
+	
+
+	<div class="wrapper">
+
+		<input id="menu__toggle" type="checkbox" />
+		<label class="menu__btn" for="menu__toggle">
+		  <span></span>
+		</label>
+
+		<!-- Button-burger-menu section -->
+		<dev class="menu__box">
+			<div class="dropdown">
+
+				<button onclick="myFunction1()" class="dropbtn">
+					<a href="index.html">Компания</a>
+					<div class="arrow-4" id="arrow1">
+						<span class="arrow-4-left"></span>
+						<span class="arrow-4-right"></span>
+					</div>
+			  </button>
+			  <div id="myDropdown1" class="dropdown-content">
+				<button id="simple-btn" onclick="getAbout()"><a href="index.html#1">- О Компании</a></button>
+				<button id="simple-btn" onclick="getCerts()"><a href="index.html#2">- Сертификаты</a></button>
+				<button id="simple-btn" onclick="getCommand()"><a href="index.html#3">- Наша команда</a></button>
+				<button id="simple-btn" onclick="getReqs()"><a href="index.html#4">- Реквизиты</a></button>
+			  </div>
+		  
+		  
+			  <button onclick="myFunction2()" class="dropbtn">
+					<a href="catalog.html">Каталог</a>
+						<div class="arrow-4" id="arrow2">
+							<span class="arrow-4-left"></span>
+							<span class="arrow-4-right"></span>
+						</div>
+			  </button>
+			  <div id="myDropdown2" class="dropdown-content">
+				<button id="simple-btn" onclick="getManipula1()"><a href="catalog.html#1">- Манипула 1</a></button>
+				<button id="simple-btn" onclick="getManipula2()"><a href="catalog.html#2">- Манипула 2</a></button>
+				<button id="simple-btn" onclick="getManipula3()"><a href="catalog.html#3">- Манипула 3</a></button>
+				<button id="simple-btn" onclick="getManipula4()"><a href="catalog.html#4">- Манипула 4</a></button>
+			  </div>
+		
+		
+			  <button onclick="myFunction3()" class="dropbtn">
+				<a href="services.html">Услуги</a>
+						<div class="arrow-4" id="arrow3">
+							<span class="arrow-4-left"></span>
+							<span class="arrow-4-right"></span>
+						</div>
+			  </button>
+			  <div id="myDropdown3" class="dropdown-content">
+				<button id="simple-btn" onclick="getDesigning()"><a href="services.html#1">- Проектирование</a></button>
+				<button id="simple-btn" onclick="getTpa()"><a href="services.html#2">- Заказ ТПА</a></button>
+				<button id="simple-btn" onclick="getTocarka()"><a href="services.html#3">- Токарный цех</a></button>
+				<button id="simple-btn" onclick="getFrezerovka()"><a href="services.html#4">- Фрезерный цех</a></button>
+				<button id="simple-btn" onclick="getService_med_tech()"><a href="services.html#5">- Сервисное обслуживание медицинской техники</a></button>
+				<button id="simple-btn" onclick="getCollabs()"><a href="services.html#6">- Предложение о сотрудничестве</a></button>
+			  </div>
+		
+		
+			  <button class="dropbtn"><a href="contacts.html">Контакты</a></button>
+			  <button class="dropbtn"><a href="gallery.html">Галерея</a></button>
+				
+		  	</div>
+		</dev>
+
+		<!-- Header section -->
+		<header class="header">
+			<div class="logo">
+				<a href="index.html"><img src="./img/logo.svg" alt="Hepoll"></a>
+			</div>
+
+			<nav class="nav">
+				<ul class="topmenu">
+					<li><a href="index.html" class="down">Компания<i class="pointer"></i></a>
+						<ul class="submenu">
+							<li><a href="index.html#1" onclick="getAbout()">О компании</a></li>
+							<li><a href="index.html#2" onclick="getCerts()">Сертификаты</a></li>
+							<li><a href="index.html#3" onclick="getCommand()">Наша команда</a></li>
+							<li><a href="index.html#4" onclick="getReqs()">Реквизиты</a></li>
+						</ul>
+					</li>
+					<li><a href="catalog.html" class="down">Каталог<i class="pointer"></i></a>
+						<ul class="submenu">
+							<li><a href="catalog.html#1" onclick="getManipula1()">Манипула 1</a></li>
+							<li><a href="catalog.html#2" onclick="getManipula2()">Манипула 2</a></li>
+							<li><a href="catalog.html#3" onclick="getManipula3()">Манипула 3</a></li>
+							<li><a href="catalog.html#4" onclick="getManipula4()">Манипула 4</a></li>
+						</ul>
+					</li>
+					<li><a href="services.html" class="down">Услуги<i class="pointer"></i></a>
+						<ul class="submenu">
+							<li><a href="services.html#1" onclick="getDesigning()">Проектирование</a></li>
+							<li><a href="services.html#2" onclick="getTpa()">Заказ ТПА</a></li>
+							<li><a href="services.html#3" onclick="getTocarka()">Токарный цех</a></li>
+							<li><a href="services.html#4" onclick="getFrezerovka()">Фрезерный цех</a></li>
+							<li><a href="services.html#5" onclick="getService_med_tech()">Сервисное обслуживание медицинской техники</a></li>
+							<li><a href="services.html#6" onclick="getCollabs()">Предложение о сотрудничестве</a></li>
+						</ul>
+					</li>
+					<li><a href="contacts.html">Контакты</a></li>
+					<li><a href="gallery.html">Галерея</a></li>
+				</ul>
+			</nav>
+			
+		</header>
+
+		<!--Main section-->
+		<div class="main">			
+
+			<!-- Path section -->
+			<div class="path-container">
+				<div class="path-container--step1">Контакты</div>
+				<div class="path-container--suffix">
+					<a><img src="img/suffix.svg"></a>
+				</div>
+				<div class="path-container--step2"></div>
+			</div>
+			
+			<!-- Main container section -->			
+			<div class="main-container">
+
+				<div class="contacts">
+					+7 (499) 673-33-99 <br>
+					manager@hepoll.ru <br>
+					г. Москва ул. Крылатская 2к4
+				</div>
+
+				<div class="main-container--material">
+					<!-- <div class="row" id="row-reqs"> -->
+					<div class="map">
+						<script type="text/javascript" charset="utf-8"
+							src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aec83c1f4ffee7aef747dab256ffad2a9737bb00bafc5e1c1abbe0463ec56fbb1&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true">
+						</script>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- Footer section -->
+		<footer class="footer">
+			<div class="logo-green">
+				<a href="index.html"><img src="./img/logo_footer.svg" alt="Hepoll"></a>
+			</div>
+			<ul class="footer-info">
+				<li>+7(499)673-33-99</li>
+				<li>manager@hepoll.ru</li>
+			</ul>
+		</footer>
+
+
+	</div>
+
+</body>
+</html>
